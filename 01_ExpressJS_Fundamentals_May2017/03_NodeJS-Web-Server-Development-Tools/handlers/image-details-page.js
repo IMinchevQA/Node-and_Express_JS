@@ -37,6 +37,8 @@ module.exports = (req, res) => {
                         <h2>${image.name}</h2>
                         </div>`;
                let html = data.toString().replace('{content}', content);
+               console.log(html);
+               console.log(req.pathname)
                // html = html.replace('{style}', '<link href="../content/styles/site.css" rel="stylesheet"/>');
                // console.log(html)
 
