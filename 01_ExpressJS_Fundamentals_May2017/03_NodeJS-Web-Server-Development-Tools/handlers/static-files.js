@@ -27,7 +27,11 @@ let isFileExtensionAllowed = (req) => {
 };
 
 module.exports = (req, res) => {
-        if (req.path.startsWith('/content/') && req.method === 'GET') {
+        // console.log(req.path);
+        // if(req.path === '/images/content/styles/site.css') {
+        //     req.path === '/content/styles/site.css';
+        // }
+        if (req.path.startsWith('/content/') || req.path.startsWith('/images/content/') && req.method === 'GET') {
             let filePath = '.' + req.path;
             let isFileAllowed = isFileExtensionAllowed(req);
 

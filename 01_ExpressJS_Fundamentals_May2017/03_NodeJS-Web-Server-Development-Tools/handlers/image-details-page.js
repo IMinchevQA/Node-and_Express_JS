@@ -16,7 +16,6 @@ module.exports = (req, res) => {
 
         if (requestedImage.length > 0) {
             let image = requestedImage[0];
-
             let filePath = path.normalize(path.join(__dirname, '../views/image-details.html'));
             fs.readFile(filePath, (err, data) => {
                if (err) {
@@ -37,11 +36,6 @@ module.exports = (req, res) => {
                         <h2>${image.name}</h2>
                         </div>`;
                let html = data.toString().replace('{content}', content);
-               console.log(html);
-               console.log(req.pathname)
-               // html = html.replace('{style}', '<link href="../content/styles/site.css" rel="stylesheet"/>');
-               // console.log(html)
-
                res.write(html);
                res.end();
 

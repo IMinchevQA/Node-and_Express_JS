@@ -29,7 +29,7 @@ module.exports = (req, res) => {
                 content +=
                     `<div class="image-card">
                         <img class="image-img" src="${image.imageUrl}">
-                        <a href="/images/details/${image.id}"><h2>${image.name}</h2></a>
+                            <a href="/images/details/${image.id}"><h2>${image.name}</h2></a>
                         </div>`
             }
             // 'data' is the html page where the content will be inserted.

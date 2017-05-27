@@ -15,11 +15,6 @@ module.exports = (req, res) => {
             res.writeHead(200, {
                 'Content-Type': 'text/html'
             });
-
-            let images = database.images.getAll();
-            for (let image of images) {
-                console.log(image.imageUrl)
-            }
             res.write(data);
             res.end();
         });
